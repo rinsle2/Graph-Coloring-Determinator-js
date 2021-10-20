@@ -1,4 +1,4 @@
-class Determinator {
+class GraphColoringDeterminator {
     constructor() {
         this._nodeMap = {}
         this._nC = 0
@@ -55,10 +55,10 @@ class Determinator {
     }
     // Changing >= to > will make one graph give a false negative, swapping it back is a false positive, fix it
     _config1(len) {
-        return (len == this._nC - 1 || this._nC > this._c) && len >= this._c
+        return (len == this._nC - 1 || this._nC > this._c) && len >= this._c && this._nC == this._c+1
     }
     // May or may not be necessary
-    _config2(len) {return false;}
+    _config2(len) {return (len == this._nC - 1 || this._nC > this._c) && len > this._c && this._nC != this._c+1}
     // Functions using lists
     _rowCounts(l) {if(l.isEmpty()) this._nC--}
 
@@ -68,7 +68,7 @@ class Determinator {
         if(this._config1(len) || this._config2(len)) this._setFalse()
     }
     // Driver
-    graphColorDeterminator(co) {
+    graphColorDeterminator(co = 3) {
         this._initChecks()
         this._c = co
         for(var n in this._nodeMap) this._rowCounts(this._nodeMap[n])
