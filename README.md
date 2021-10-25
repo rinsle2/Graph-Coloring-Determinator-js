@@ -34,6 +34,6 @@ Failed Ideas:<br/>
 - Coming soon.
 <br/>
 Possible Solution:<br/>
-- Create a copy of the graph matrix, and check for all rows with a langth of 1, for each row with a length of 1, go to the adjacent node and remove the connection, thus fixing the issue perscribed above if repeated until no nodes are considered "valid"
+- Create a copy of the graph matrix, and check for all rows with a langth of 1, for each row with a length of 1, go to the adjacent node and remove the connection, thus fixing the issue perscribed above if repeated until no nodes are considered "valid"<br/>
 Result of Testing Solution:<br/>
 - Coming soon.
