@@ -32,3 +32,8 @@ Failed Ideas:<br/>
 - Go through one layer of traversal, and use that one layer to determine if the adjacent nodes only have a list size of 1, if so, using a separate field within the class' information (somewhere), decrease the amount of the len that the node uses on the previous node.<br/>
   - Fails with the graph above and similar graphs of that nature, due to the algorithm allowing the complete compression of the graph down to a single node if not handled properly, also it's far too slow.
 - Coming soon.
+<br/>
+Possible Solution:<br/>
+- Create a copy of the graph matrix, and check for all rows with a langth of 1, for each row with a length of 1, go to the adjacent node and remove the connection, thus fixing the issue perscribed above if repeated until no nodes are considered "valid"
+Result of Testing Solution:<br/>
+- Coming soon.
